@@ -10,9 +10,7 @@ function generateCode() {
 
 // Función principal para iniciar el juego
 function startGame() {
-    const secretCode = generateCode(); // Código secreto para adivinar
-	console.log(secretCode);
-	
+    const secretCode = generateCode(); // Código secreto para adivinar	
     let attempts = 0; // Contador de intentos
 
 	// Función para verificar la jugada del jugador
