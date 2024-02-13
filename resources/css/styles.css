@@ -1,0 +1,111 @@
+/* styles.css */
+
+body{
+	color: #333333; /* Gris oscuro */
+	background-color: #a8e6cf;
+	font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos para el contenedor principal */
+#game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea el contenido en la parte superior */
+    align-items: center; /* Centra horizontalmente el contenido */
+    height: 100vh; /* Altura del viewport */
+}
+
+/* Estilos para el contenedor de las conjeturas */
+#guess-container {
+	margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el contenedor de las conjeturas anteriores */
+#previous-guesses {
+    margin-bottom: 20px;
+}
+
+/* Estilos para el contenedor de retroalimentación */
+#feedback-container {
+	margin-bottom: 20px;
+    white-space: nowrap; /* Evitar que las fichas pasen a la siguiente línea */
+    overflow-x: auto; /* Agregar desplazamiento horizontal si las fichas exceden el ancho del contenedor */
+}
+
+
+
+/* Estilo para los selects */
+.guess {
+    appearance: none; /* Oculta el estilo nativo del navegador */
+    padding: 8px 16px; /* Ajusta el espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    border: 2px solid #ccc; /* Borde */
+    border-radius: 4px; /* Borde redondeado */
+    background-color: #fff; /* Fondo */
+    color: #333; /* Color de texto */
+}
+
+/* Estilo cuando el select está enfocado */
+.guess:focus {
+    outline: none; /* Elimina el contorno de enfoque predeterminado */
+    border-color: #66afe9; /* Cambia el color del borde cuando está enfocado */
+}
+
+/* Estilo para el botón Guess */
+#submit-btn {
+    padding: 10px 20px; /* Ajusta el espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    border: none; /* Elimina el borde */
+    border-radius: 4px; /* Borde redondeado */
+    background-color: #66afe9; /* Fondo */
+    color: #fff; /* Color de texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Estilo cuando el botón está enfocado o activo */
+#submit-btn:focus, #submit-btn:active {
+    outline: none; /* Elimina el contorno de enfoque predeterminado */
+    background-color: #5cb85c; /* Cambia el color de fondo cuando está enfocado o activo */
+}
+
+/* Estilos para las fichas de retroalimentación */
+.peg {
+    width: 35px;
+    height: 35px;
+    border-radius: 20%;
+    margin: 5px; /* Espacio entre las fichas */
+    display: inline-block; /* Mostrar las fichas en línea */
+}
+
+/* Estilos para las fichas negras */
+.peg.red {
+    background-color: red;
+}
+
+.peg.orange {
+    background-color: orange;
+}
+.peg.green {
+    background-color: green;
+}
+
+.peg.black {
+    background-color: black;
+}
+
+.peg.white {
+    background-color: white;
+	border: 1px solid #999;    
+}
+
+/* Estilos para ajustar el margen superior de las fichas */
+.peg-group {
+    margin-top: 20px; /* Margen superior inicial */
+}
+
+/* Reducir el margen superior para los grupos siguientes */
+.peg-group:nth-child(n+2) {
+    margin-top: 10px; /* Margen superior reducido para los siguientes grupos */
+}
